@@ -3,7 +3,7 @@ from datetime import datetime
 
 from matplotlib import pyplot as plt
 
-filename = 'data/sitka_weather_2018_simple.csv'
+filename = 'data/newOrleans.csv'
 with open(filename) as f:
     reader = csv.reader(f)
     header_row = next(reader)
@@ -13,7 +13,7 @@ with open(filename) as f:
     for row in reader:
         current_date = datetime.strptime(row[2], '%Y-%m-%d')
         dates.append(current_date)
-        high = int(row[5])
+        high = int(row[6])
         highs.append(high)
 
 # Plot the high temperatures.
